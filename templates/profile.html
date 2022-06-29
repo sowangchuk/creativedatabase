@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+     {%if user.is_approved%}
+    <td>{{x.user}}</td><br>
+    <td>{{x.name}}</td><br>
+    
+    <td>{{x.mail}}</td><br>
+    <td>{{x.phone}}</td><br>
+    <img src="{{pubprofile.url}}" ><br>
+    <td>{{x.pubcountry}}</td><br>
+    <td>{{x.pudDzongkhag}}</td><br>
+    <td>{{x.pubmarital_status}}</td><br>
+    <td>{{x.pubemployment_status}}</td><br>
+    <td>{{x.pubskills}}</td><br>
+    <img src="{{artist_profile.pubdocument.url}}" ><br>
+    <a href="{% url 'proupdate'%} ">proupdate</a>
+    <a href="{% url 'approved'%}">Back</a><br>
+    {%endif%}
+    
+    
+   
+   
+              
+</body>
+</html>
